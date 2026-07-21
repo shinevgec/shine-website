@@ -49,26 +49,32 @@ export default function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-black/80 backdrop-blur-md hairline-b">
-      <div className="max-w-[1480px] mx-auto px-6 py-4 flex items-center justify-between">
-        <div className="flex items-center gap-4">
+    <header className="sticky top-0 z-50 bg-black/80 backdrop-blur-md">
+      <div className="max-w-[1480px] mx-auto px-6 grid grid-cols-3 items-center hairline-b">
+        
+        {/* Left Column */}
+        <div className="flex items-center gap-4 py-4 border-r border-white/[0.04]">
           <span className="section-label">LOCAL/</span>
           <span className="font-mono text-sm tracking-wider">{formatTime(time)}</span>
         </div>
         
-        {/* Hamburger icon (2x2 grid of small dots) */}
-        <div className="hidden md:grid grid-cols-2 gap-1 opacity-50">
-          <div className="w-1.5 h-1.5 bg-white rounded-full"></div>
-          <div className="w-1.5 h-1.5 bg-white rounded-full"></div>
-          <div className="w-1.5 h-1.5 bg-white rounded-full"></div>
-          <div className="w-1.5 h-1.5 bg-white rounded-full"></div>
+        {/* Center Column - Hamburger icon */}
+        <div className="flex justify-center py-4 border-r border-white/[0.04]">
+          <div className="grid grid-cols-2 gap-1 opacity-50">
+            <div className="w-1.5 h-1.5 bg-white rounded-full"></div>
+            <div className="w-1.5 h-1.5 bg-white rounded-full"></div>
+            <div className="w-1.5 h-1.5 bg-white rounded-full"></div>
+            <div className="w-1.5 h-1.5 bg-white rounded-full"></div>
+          </div>
         </div>
 
-        <div>
+        {/* Right Column */}
+        <div className="flex justify-end py-4">
           <MagneticButton onClick={handleContactClick}>
             CONTACT NOW
           </MagneticButton>
         </div>
+
       </div>
     </header>
   );

@@ -13,16 +13,16 @@
 
 @layer utilities {
   .hairline-b {
-    @apply border-b border-white/10;
+    @apply border-b border-white/[0.04];
   }
   .hairline-t {
-    @apply border-t border-white/10;
+    @apply border-t border-white/[0.04];
   }
   .hairline-x {
-    @apply border-x border-white/10;
+    @apply border-x border-white/[0.04];
   }
   .hairline-r {
-    @apply border-r border-white/10;
+    @apply border-r border-white/[0.04];
   }
   
   .card-fill {

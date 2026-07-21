@@ -1,9 +1,39 @@
+import { useEffect, useRef } from 'react';
+import { motion, useInView, useMotionValue, useTransform, animate } from 'framer-motion';
+
+function StatCounter({ target, suffix, label }) {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-50px" });
+  
+  const count = useMotionValue(0);
+  const rounded = useTransform(count, (latest) => Math.round(latest));
+  
+  useEffect(() => {
+    if (isInView) {
+      const controls = animate(count, target, { duration: 2, ease: "easeOut" });
+      return controls.stop;
+    }
+  }, [isInView, count, target]);
+
+  return (
+    <div className="flex flex-col items-center justify-center pt-8 md:pt-0 first:pt-0">
+      <span ref={ref} className="text-6xl md:text-7xl lg:text-[6rem] font-bold tracking-tighter mb-4 flex items-center justify-center">
+        <motion.span>{rounded}</motion.span>
+        <span>{suffix}</span>
+      </span>
+      <span className="text-sm uppercase tracking-widest text-white/50">
+        {label}
+      </span>
+    </div>
+  );
+}
+
 export default function Stats() {
   const stats = [
-    { value: "10+", label: "Projects done" },
-    { value: "3+", label: "Years of experience" },
-    { value: "3+", label: "Recognitions" },
-    { value: "29%", label: "Happy clients" },
+    { value: 1000, suffix: "+", label: "Projects done" },
+    { value: 10, suffix: "+", label: "Years of experience" },
+    { value: 1000, suffix: "+", label: "Recognitions" },
+    { value: 99, suffix: "%", label: "Happy clients" },
   ];
 
   return (
@@ -21,16 +51,14 @@ export default function Stats() {
           {/* Background pattern mask if needed */}
           <div className="absolute inset-0 bg-[radial-gradient(rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:12px_12px] opacity-20 pointer-events-none"></div>
           
-          <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-white/10">
+          <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-white/[0.04]">
             {stats.map((stat, idx) => (
-              <div key={idx} className="flex flex-col items-center justify-center pt-8 md:pt-0 first:pt-0">
-                <span className="text-6xl md:text-7xl lg:text-[6rem] font-bold tracking-tighter mb-4">
-                  {stat.value}
-                </span>
-                <span className="text-sm uppercase tracking-widest text-white/50">
-                  {stat.label}
-                </span>
-              </div>
+              <StatCounter 
+                key={idx} 
+                target={stat.value} 
+                suffix={stat.suffix} 
+                label={stat.label} 
+              />
             ))}
           </div>
         </div>

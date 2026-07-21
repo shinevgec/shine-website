@@ -21,31 +21,32 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 0.5 }}
-        className="hairline-y border-t border-b border-white/10 mt-10"
+        className="mt-10"
       >
-        <div className="max-w-[1480px] mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-6 py-8">
-          <div className="flex items-start gap-3">
-            <MapPin className="text-accent-green shrink-0 mt-1" size={24} />
-            <div>
-              <p className="font-semibold uppercase tracking-wide">BASED IN MOTERA,</p>
-              <p className="text-white/50 uppercase tracking-wide">AHMEDABAD</p>
-            </div>
+        <div className="max-w-[1480px] mx-auto px-6 grid grid-cols-3 items-center hairline-y text-xs md:text-sm uppercase tracking-wide text-white/50">
+          
+          {/* Left Column */}
+          <div className="flex items-center gap-2 py-6 pr-4 border-r border-white/[0.04]">
+            <div className="w-2 h-2 rounded-full border border-accent-green"></div>
+            <p className="tracking-wide">BASED IN MOTERA,<br/>AHMEDABAD</p>
           </div>
           
-          <div className="flex items-center justify-center md:justify-center">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 card-fill">
+          {/* Center Column */}
+          <div className="flex items-center justify-center py-6 border-r border-white/[0.04]">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/[0.04] card-fill">
               <div className="w-2 h-2 rounded-full bg-accent-green animate-pulse"></div>
               <span className="text-sm uppercase tracking-wide text-white/70">Available for work</span>
             </div>
           </div>
 
-          <div className="flex items-start gap-3 md:justify-end">
-            <CheckCircle2 className="text-accent-blue shrink-0 mt-1" size={24} />
-            <div>
-              <p className="font-semibold uppercase tracking-wide">PRODUCT DESIGNER &</p>
-              <p className="font-semibold uppercase tracking-wide">VISUALIZER</p>
+          {/* Right Column */}
+          <div className="flex items-center justify-end gap-2 py-6 pl-4">
+            <div className="w-3 h-3 rounded-full border border-blue-500 flex items-center justify-center">
+              <div className="w-1 h-1 bg-blue-500 rounded-full"></div>
             </div>
+            <p className="tracking-wide text-right">PRODUCT DESIGNER &<br/>VISUALIZER</p>
           </div>
+
         </div>
       </motion.div>
 

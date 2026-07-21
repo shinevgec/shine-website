@@ -33,6 +33,13 @@
     @apply text-[14vw] sm:text-[90px] md:text-[180px] lg:text-[250px] xl:text-[320px] font-bold uppercase leading-[0.8] tracking-tighter;
   }
   
+  .bg-mesh-texture {
+    background-color: #000000;
+    background-image: radial-gradient(#2a2a2a 2px, transparent 2px);
+    background-size: 24px 24px;
+    background-position: 0 0;
+  }
+
   .section-label {
     @apply text-xs uppercase tracking-wide text-white/50;
   }

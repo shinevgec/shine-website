@@ -55,7 +55,7 @@ export default function Hero() {
         transition={{ duration: 1, delay: 0.8, ease: "easeOut" }}
         className="max-w-[1480px] mx-auto px-6 py-10"
       >
-        <div className="w-full h-[400px] md:h-[600px] lg:h-[700px] rounded-[20px] overflow-hidden card-fill border border-white/10 relative">
+        <div className="w-full h-[400px] md:h-[600px] lg:h-[700px] rounded-[20px] overflow-hidden card-fill border border-white/10 relative bg-mesh-texture">
           {/* Placeholder for hero image */}
           <div className="absolute inset-0 flex items-center justify-center text-white/20">
             <img src="/assets/images/hero-banner.avif" alt="Hero Banner" className="w-full h-full object-cover" />

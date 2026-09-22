@@ -56,3 +56,15 @@
 .pause-on-hover:hover {
   animation-play-state: paused;
 }
+
+/* Real-time Developer Wireframe Mode */
+.dev-wireframe * {
+  outline: 1px solid rgba(61, 220, 132, 0.25) !important;
+}
+.dev-wireframe section {
+  outline: 1.5px dashed rgba(78, 168, 255, 0.5) !important;
+}
+.dev-wireframe button, 
+.dev-wireframe a {
+  outline: 1.5px solid rgba(255, 189, 46, 0.6) !important;
+}

@@ -60,7 +60,7 @@ export default function Testimonials() {
       <div className="max-w-[1480px] mx-auto px-6 mb-16">
         {/* Meta row */}
         <div className="flex justify-between items-center mb-16 section-label">
-          <span>011</span>
+          <span>07</span>
           <span>//TESTIMONIAL</span>
           <span>VOICES</span>
         </div>

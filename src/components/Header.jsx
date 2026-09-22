@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
-export default function Header() {
+export default function Header({ onOpenTerminal }) {
   const [time, setTime] = useState(new Date());
 
   useEffect(() => {
@@ -41,7 +41,7 @@ export default function Header() {
         onClick={onClick}
         animate={{ x: position.x, y: position.y }}
         transition={{ type: "spring", stiffness: 150, damping: 15, mass: 0.1 }}
-        className="btn-outline text-sm py-2 px-5 relative"
+        className="btn-outline text-xs md:text-sm py-2 px-4 md:px-5 relative"
       >
         {children}
       </motion.button>
@@ -52,20 +52,24 @@ export default function Header() {
     <header className="sticky top-0 z-50 bg-black/80 backdrop-blur-md">
       <div className="max-w-[1480px] mx-auto px-6 grid grid-cols-3 items-center hairline-b">
         
-        {/* Left Column */}
-        <div className="flex items-center gap-4 py-4 border-r border-white/[0.04]">
-          <span className="section-label">LOCAL/</span>
-          <span className="font-mono text-sm tracking-wider">{formatTime(time)}</span>
+        {/* Left Column - Time */}
+        <div className="flex items-center gap-3 md:gap-4 py-4 border-r border-white/[0.04]">
+          <span className="section-label hidden sm:inline">LOCAL/</span>
+          <span className="font-mono text-xs md:text-sm tracking-wider text-white/80">{formatTime(time)}</span>
         </div>
         
-        {/* Center Column - Hamburger icon */}
+        {/* Center Column - Interactive Developer Terminal Trigger */}
         <div className="flex justify-center py-4 border-r border-white/[0.04]">
-          <div className="grid grid-cols-2 gap-1 opacity-50">
-            <div className="w-1.5 h-1.5 bg-white rounded-full"></div>
-            <div className="w-1.5 h-1.5 bg-white rounded-full"></div>
-            <div className="w-1.5 h-1.5 bg-white rounded-full"></div>
-            <div className="w-1.5 h-1.5 bg-white rounded-full"></div>
-          </div>
+          <button 
+            onClick={onOpenTerminal}
+            className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full card-fill border border-white/10 hover:border-white/30 text-white/60 hover:text-white transition-all text-xs font-mono group"
+            title="Open Developer Console (Ctrl+K)"
+          >
+            <span className="w-1.5 h-1.5 rounded-full bg-accent-green animate-pulse"></span>
+            <span className="text-white/80 group-hover:text-accent-green transition-colors">&gt;_</span>
+            <span className="hidden sm:inline tracking-wider font-semibold">DEV SHELL</span>
+            <kbd className="hidden md:inline text-[10px] text-white/40 bg-white/5 px-1.5 py-0.5 rounded border border-white/10">⌘K</kbd>
+          </button>
         </div>
 
         {/* Right Column */}

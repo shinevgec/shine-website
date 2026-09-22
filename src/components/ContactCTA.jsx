@@ -37,14 +37,14 @@ export default function ContactCTA() {
           </div>
           
           <div className="md:text-left">
-            <span className="section-label block">INDUSTRIAL DESIGNER</span>
+            <span className="section-label block">FULL STACK DEVELOPER</span>
           </div>
         </div>
 
         {/* Centered Statement */}
         <div className="max-w-3xl mx-auto mb-20">
           <p className="text-xl md:text-3xl font-bold uppercase leading-relaxed tracking-wide text-white/80">
-            BASED IN INDIA, I AM AN INNOVATIVE DESIGNER AND DIGITAL ARTIST. MY PASSION FOR MINIMALIST AESTHETICS, AND INTUITIVE DESIGN IS EVIDENT IN MY WORK.
+            BASED IN INDIA, I AM AN INNOVATIVE FULL STACK & WEB DEVELOPER. MY PASSION FOR MINIMALIST AESTHETICS AND INTUITIVE ENGINEERING IS EVIDENT IN MY WORK.
           </p>
         </div>
 

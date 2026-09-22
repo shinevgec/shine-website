@@ -7,28 +7,28 @@ export default function FAQ() {
 
   const faqs = [
     {
-      q: "Can you help me visualize my product idea from scratch?",
-      a: "Yes! I can take your initial concepts or rough sketches and turn them into polished 3D models and high-quality renders. We'll work closely to ensure the final visual perfectly represents your vision."
+      q: "What is your primary tech stack for building web applications?",
+      a: "I build primarily with React/Next.js 14 and TypeScript on the frontend paired with Node.js/Express or serverless edge functions on the backend. For persistent storage, I rely on PostgreSQL with Prisma ORM or Supabase, styled cleanly with Tailwind CSS and animated using Framer Motion."
     },
     {
-      q: "What tools do you use for design and rendering?",
-      a: "I primarily use industry-standard software like Blender, Cinema 4D, SolidWorks, and Figma, depending on the specific needs of the project. I'm always exploring new tools to push creative boundaries."
+      q: "Do you engineer full-stack systems end-to-end or solely frontend?",
+      a: "Full stack end-to-end. I handle relational database schema design, REST/GraphQL API creation, secure authentication (JWT/OAuth), state management, and cloud deployment, while also delivering pixel-perfect, highly responsive user interfaces."
     },
     {
-      q: "How involved can I be during the design process?",
-      a: "As involved as you'd like to be! I value collaborative workflows and ensure regular check-ins and feedback loops so that the final output aligns perfectly with your expectations."
+      q: "How do you ensure web performance and strong SEO scores?",
+      a: "I optimize every build for 95+ Core Web Vitals scores by leveraging server-side rendering (SSR), dynamic code splitting, modern image optimization (AVIF/WebP), edge caching, and semantic HTML5 for high SEO crawlability."
     },
     {
-      q: "How long does a typical project take?",
-      a: "Project timelines vary significantly based on complexity. A simple product render might take a few days, while a full conceptual design and animation suite could take a few weeks. I always provide a clear timeline upfront."
+      q: "Can you collaborate with existing engineering teams and codebases?",
+      a: "Yes, seamlessly. I follow strict Git branch workflows, maintain comprehensive typing, write modular self-documenting code, and integrate easily into CI/CD pipelines via GitHub Actions and Docker."
     },
     {
-      q: "Can you help with investor or pitch deck visuals?",
-      a: "Absolutely. I specialize in creating striking, high-fidelity imagery that communicates the value and functionality of your product, making it ideal for presentations and pitch decks."
+      q: "How do you achieve fluid 60fps animations without slowing down page load?",
+      a: "I rely on hardware-accelerated CSS transforms and lightweight motion drivers like Framer Motion and Lenis. Heavy layout recalcs are avoided during scrolling, and computational loads are debounced so memory consumption remains minimal."
     },
     {
-      q: "What if I need changes after the final delivery?",
-      a: "I include a set number of revision rounds in my initial scope to ensure you are completely satisfied. If additional changes are needed later, I'm happy to accommodate them on a mutually agreed basis."
+      q: "What does your typical project timeline and milestone delivery look like?",
+      a: "Timelines depend on scope—a high-converting landing page or web application frontend takes 1 to 2 weeks, while a full-scale full-stack SaaS typically takes 3 to 6 weeks. I deliver in structured weekly sprints with live staging links so you can test real progress at every step."
     }
   ];
 
@@ -37,13 +37,13 @@ export default function FAQ() {
   };
 
   return (
-    <section className="hairline-t pt-10 pb-24">
+    <section id="faq" className="hairline-t pt-10 pb-24">
       <div className="max-w-[1480px] mx-auto px-6">
         {/* Meta row */}
         <div className="flex justify-between items-center mb-16 section-label">
-          <span>012</span>
-          <span>//FAQ</span>
-          <span>CONCERNS</span>
+          <span>08</span>
+          <span>//ENGINEERING FAQ</span>
+          <span>SYSTEMS & TIMELINES</span>
         </div>
 
         {/* Centered heading */}
@@ -92,7 +92,7 @@ export default function FAQ() {
                       className="overflow-hidden"
                     >
                       <div className="pb-10">
-                        <p className="text-white/60 md:text-lg leading-relaxed pl-12 md:pl-[4.5rem] max-w-3xl">
+                        <p className="text-white/60 md:text-lg leading-relaxed pl-12 md:pl-[4.5rem] max-w-3xl font-normal">
                           {faq.a}
                         </p>
                       </div>

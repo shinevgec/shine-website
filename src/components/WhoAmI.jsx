@@ -21,7 +21,7 @@ export default function WhoAmI() {
       <div className="max-w-[1480px] mx-auto px-6">
         {/* Meta row */}
         <div className="flex justify-between items-center mb-16 section-label">
-          <span>03</span>
+          <span>04</span>
           <span>//WHO AM I</span>
           <span>SINCE 2005</span>
         </div>
@@ -53,10 +53,10 @@ export default function WhoAmI() {
         {/* Subheading & Paragraph */}
         <div className="max-w-4xl mx-auto text-center flex flex-col items-center gap-6 mt-16">
           <h3 className="text-xl md:text-2xl font-bold uppercase tracking-widest">
-            I'M A PRODUCT DESIGNER & VISUALIZER.
+            I'M A FULL STACK & WEB DEVELOPER.
           </h3>
           <p className="text-white/60 text-base md:text-lg leading-relaxed max-w-3xl">
-            I design products that look good, feel intuitive, and work seamlessly. My approach is smart, intentional, and focused on solving real problems. I push tools and workflows to their limits to turn ideas into polished, functional experiences — unconventional when needed, but always built to make sense.
+            I build modern web applications that look good, feel intuitive, and perform seamlessly. My approach is smart, intentional, and focused on solving real problems. I push modern web technologies and frameworks to their limits to turn ideas into polished, functional experiences — clean code, responsive design, and always built to scale.
           </p>
           <button
             onClick={() => setShowEasterEgg(true)}

@@ -44,7 +44,7 @@ export default function Hero() {
             <div className="w-3 h-3 rounded-full border border-blue-500 flex items-center justify-center">
               <div className="w-1 h-1 bg-blue-500 rounded-full"></div>
             </div>
-            <p className="tracking-wide text-right">PRODUCT DESIGNER &<br/>VISUALIZER</p>
+            <p className="tracking-wide text-right">FULL STACK &<br/>WEB DEVELOPER</p>
           </div>
 
         </div>

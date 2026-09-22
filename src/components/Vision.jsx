@@ -12,7 +12,7 @@ export default function Vision() {
         {/* Giant centered statement */}
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold uppercase leading-[1.1] tracking-tight max-w-6xl mx-auto">
-            FREELANCE CREATIVE PROFESSIONAL LOCATED IN AHMEDABAD GUJARAT, HELPING MEMBERS & BUSINESSES ACHIEVE THEIR VISION IN MEDIA AND DESIGN.
+            FREELANCE FULL STACK & WEB DEVELOPER LOCATED IN AHMEDABAD GUJARAT, HELPING CLIENTS & BUSINESSES ACHIEVE THEIR VISION ON THE WEB.
           </h2>
         </div>
 
